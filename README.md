@@ -6,10 +6,10 @@ jQuery plugin to place one element next to another somewhat independently of the
 Example:
 --------
 ```javascript
-$('<div class="marker"></div>').placeNextTo(".target", "left");
+$('<div class="marker"></div>').placeNextTo(".target", 200, 10);
 ```
 
-Would place ".marker" element next to left of the first ".target" found.
+Would place ".marker" element 200px right and 10px down from  upper left corner of the first ".target" found.
 
 Prerequisites:
 
