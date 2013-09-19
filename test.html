@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>pos</title>
+<style type="text/css">
+
+.box
+{
+    background: #eee;
+    padding: 10px;
+}
+
+.box
+{
+    min-height: 300px;
+}
+
+h1
+{
+    font-size: 1.2em;
+    color: #666;
+}
+
+#tst1
+{
+    background: #fff;
+}
+
+#tst2
+{
+    background: #fff;
+    position: relative;
+    left: 400px;
+    top: 10px;
+    border: 1px solid red;
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+}
+#tst3
+{
+    background: #fff;
+    position: absolute;
+    left: 800px;
+    top: 200px;
+    border: 1px solid blue;
+    width: 300px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+#tst4
+{
+    background: #fff;
+    position: fixed;
+    left: 10px;
+    top: 400px;
+    border: 1px solid green;
+    width: 300px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.marker
+{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #f0f;
+}
+
+p
+{
+    max-width: 80ex;
+}
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js">
+</script>
+
+<script type="text/javascript" src="jquery-placeNextTo-1.0.js">
+</script>
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+$(function(){
+    
+           
+    $("#tst2").scrollTop(100);
+    $("#tst3").scrollTop(100);
+    $("#tst4").scrollTop(100);
+    
+    $(".target").each(function(){
+       var $elem = $(this);
+       var $div = $('<div class="marker"></div>').placeNextTo($elem, $elem.outerWidth());
+    });
+    
+}) ;                                               
+                                                 
+//--><!]]></script>
+</head>
+<body>
+
+<div id="tst1">
+    <h1>Normal</h1>
+    <input class="target" type="text" name ="f1"/>
+    <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat elementum nisl. Aliquam consectetur nibh eu neque pretium feugiat. Aenean tincidunt vitae lorem ut sagittis. Ut imperdiet nunc eu lacus dapibus faucibus. Nam laoreet rhoncus metus, at rhoncus tellus auctor sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi facilisis tincidunt risus, vitae consequat orci facilisis eu. Duis et nulla malesuada, ultricies nulla vel, facilisis dolor. Pellentesque eu dictum leo.
+</p><p>
+Integer sed pretium lectus. Curabitur molestie neque ut gravida vulputate. Nam ac ultricies orci. Donec mattis, dolor aliquam convallis euismod, turpis ligula lacinia libero, eget porta ante dui a libero. Maecenas erat urna, semper quis justo ullamcorper, tincidunt blandit sapien. Vestibulum auctor commodo aliquet. Vivamus luctus accumsan purus, placerat convallis ante adipiscing vitae. Ut lacus lacus, sollicitudin a feugiat ut, gravida eu nisi.
+</p>
+    
+    <input class="target" type="text" name ="f2"/>
+</div>
+
+<div id="tst2">
+    <h1>Absolute-relative</h1>
+    <div class="box">
+    <input class="target" type="text" name ="f3"/>
+    </div>
+    <input class="target" type="text" name ="f4"/>
+</div>
+
+<div id="tst3">
+    <div class="wedge">
+    <h1>Absolute</h1>
+    <div class="box">
+    <input class="target" type="text" name ="f5"/>
+    </div>
+    <input class="target" type="text" name ="f6"/>
+    </div>
+</div>
+
+<div id="tst4">
+    <h1>Fixed</h1>
+    <div class="box">
+    <input class="target" type="text" name ="f5"/>
+    </div>
+    <input class="target" type="text" name ="f6"/>
+</div>
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat elementum nisl. Aliquam consectetur nibh eu neque pretium feugiat. Aenean tincidunt vitae lorem ut sagittis. Ut imperdiet nunc eu lacus dapibus faucibus. Nam laoreet rhoncus metus, at rhoncus tellus auctor sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi facilisis tincidunt risus, vitae consequat orci facilisis eu. Duis et nulla malesuada, ultricies nulla vel, facilisis dolor. Pellentesque eu dictum leo.
+</p><p>
+Integer sed pretium lectus. Curabitur molestie neque ut gravida vulputate. Nam ac ultricies orci. Donec mattis, dolor aliquam convallis euismod, turpis ligula lacinia libero, eget porta ante dui a libero. Maecenas erat urna, semper quis justo ullamcorper, tincidunt blandit sapien. Vestibulum auctor commodo aliquet. Vivamus luctus accumsan purus, placerat convallis ante adipiscing vitae. Ut lacus lacus, sollicitudin a feugiat ut, gravida eu nisi.
+</p><p>
+Maecenas adipiscing blandit dolor, non laoreet sapien dapibus nec. Donec accumsan semper quam quis scelerisque. Vivamus aliquam enim ut orci scelerisque placerat. In sit amet semper neque. Pellentesque ac consectetur purus. Aenean ornare gravida varius. Pellentesque felis lectus, eleifend at magna in, sagittis scelerisque lacus. Donec et volutpat ipsum. Vivamus convallis ligula at lobortis faucibus. Aenean at pulvinar lectus. Cras vitae enim elementum, bibendum nibh vel, commodo libero.
+</p><p>
+Curabitur aliquam sapien non est vehicula venenatis. Aliquam a tortor in justo tempor faucibus in eu nisl. Nulla ac magna molestie, cursus tellus a, ornare purus. Praesent nisl ante, tempus nec pulvinar id, placerat ac mauris. Maecenas lacus nibh, ultrices in cursus at, tincidunt vel elit. Cras metus dolor, pretium et felis vitae, mattis aliquet quam. Quisque quis ipsum rhoncus, tincidunt lectus at, varius nisi. Praesent quis pellentesque sapien. Phasellus gravida dictum nulla vitae aliquet. Nunc laoreet magna nec auctor venenatis. Mauris vitae posuere risus, nec volutpat tellus. Nullam fermentum tellus at augue vehicula aliquam. Nunc ut lacus elementum tortor dictum dapibus. Nam ornare nisl porttitor magna elementum iaculis vel vel dui.
+</p><p>
+Donec non purus aliquam risus tempus bibendum et lobortis nunc. Maecenas a sem ullamcorper, mollis purus at, varius dolor. Pellentesque nisl odio, fermentum ac enim vel, luctus congue tortor. Pellentesque sapien libero, rutrum sit amet elementum consectetur, euismod vel nulla. Phasellus vitae libero pulvinar elit malesuada commodo eu sed augue. Integer lacus purus, venenatis porttitor nisi vel, volutpat adipiscing ligula. Nunc sed sem luctus, pellentesque arcu ac, consequat velit. Vivamus mattis auctor libero, id pellentesque purus. Phasellus quis interdum libero. Nunc quis massa ornare odio sagittis tempus porttitor non risus. Nunc dui justo, consectetur ac bibendum a, semper vitae quam. Donec sed ullamcorper tellus. In vehicula viverra quam, quis semper nisi adipiscing a. Mauris sollicitudin ultricies dapibus. Suspendisse condimentum urna nec tortor venenatis, in volutpat nisl porta. Phasellus pellentesque tincidunt dui non facilisis. </body>
+</p>
+</html>
